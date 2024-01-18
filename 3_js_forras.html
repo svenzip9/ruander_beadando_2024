@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Unit teszt feladat</title>
+	<script type="text/javascript">
+	//<!-- Ide jön  a feladat megoldása... -->
+
+
+	function kivalogatParosOtven(array) {
+		return array.filter(num => num > 50 && num % 2 === 0);
+	}
+
+	function aBetukSzamaDiv() {
+    var firstDiv = document.querySelector('div');
+
+    if (firstDiv) { 
+        return Array.from(firstDiv.textContent).filter(letter => letter === 'a').length;
+    } else {  
+        return 0;
+    }
+	}
+
+	function osszeadasFeliras(osztaly, elsoOperandus, masodikOperandus) {
+    	var container = document.querySelector('.' + osztaly);
+   		if (container) {
+     	    var osszeg = Number(elsoOperandus) + Number(masodikOperandus);
+      	    var p = document.createElement('p');
+      	    p.textContent = `${elsoOperandus} + ${masodikOperandus} = ${osszeg}`;
+        	container.appendChild(p);
+    	}
+	}
+
+
+	
+	</script>
+	<script src="testBaseUnit.js"></script>
+</head>
+<body>
+    <div></div>
+	<hr>
+	<div id="testResult">
+	<h2>Tesztek</h2></div>
+</body>
+</html>
